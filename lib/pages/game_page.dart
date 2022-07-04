@@ -124,16 +124,16 @@ class _GamePageState extends State<GamePage> {
       _index1 = _random.nextInt(6);
       _index2 = _random.nextInt(6);
       _diceSum = _index1 + _index2 + 2;
-      // if (_diceSum == 7) {
-      //   _gameOver = true;
-      //   if (_score > _highestScore) {
-      //     _highestScore = _score;
-      //     _score=0;
-      //     _diceSum=0;
-      //   }
-      // } else {
+      if (_diceSum == 7) {
+        _gameOver = true;
+        if (_score > _highestScore) {
+          _highestScore = _score;
+          _score=0;
+          _diceSum=0;
+        }
+      } else {
         _score += _index1 + _index2 + 2;
-      // }
+      }
     });
   }
 
