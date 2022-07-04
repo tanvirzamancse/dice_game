@@ -79,9 +79,9 @@ class _GamePageState extends State<GamePage> {
                   "Game Over",
                   style: TextStyle(fontSize: 35.0, color: Colors.red),
                 ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
                   ElevatedButton(
                     onPressed: playDice,
                     style: ElevatedButton.styleFrom(
@@ -96,22 +96,22 @@ class _GamePageState extends State<GamePage> {
                           color: Colors.white,
                         )),
                   ),
-                  // ElevatedButton(
-                  //   onPressed: resetDice,
-                  //   style: ElevatedButton.styleFrom(
-                  //     elevation: 10.0,
-                  //     primary: Colors.red,
-                  //     padding: const EdgeInsets.fromLTRB(40.0, 12.0, 40.0, 12.0),
-                  //     // maximumSize: Size(200.0, 70.0),
-                  //   ),
-                  //   child: const Text("Reset",
-                  //       style: TextStyle(
-                  //         fontSize: 25.0,
-                  //         color: Colors.white,
-                  //       )),
-                  // ),
-              //   ],
-              // ),
+                  ElevatedButton(
+                    onPressed: resetDice,
+                    style: ElevatedButton.styleFrom(
+                      elevation: 10.0,
+                      primary: Colors.red,
+                      padding: const EdgeInsets.fromLTRB(40.0, 12.0, 40.0, 12.0),
+                      // maximumSize: Size(200.0, 70.0),
+                    ),
+                    child: const Text("Reset",
+                        style: TextStyle(
+                          fontSize: 25.0,
+                          color: Colors.white,
+                        )),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -137,11 +137,11 @@ class _GamePageState extends State<GamePage> {
     });
   }
 
-  // void resetDice() {
-  //   setState((){
-  //     _score=0;
-  //     _diceSum=0;
-  //     _gameOver=false;
-  //   });
-  // }
+  void resetDice() {
+    setState((){
+      _score=0;
+      _diceSum=0;
+      _gameOver=false;
+    });
+  }
 }
